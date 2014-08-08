@@ -30,7 +30,7 @@ module Fog
               end
             else
               case name
-              when 'vpcId', 'state', 'cidrBlock', 'dhcpOptionsId'
+              when 'vpcId', 'state', 'cidrBlock', 'dhcpOptionsId', 'enableDnsSupport', 'enableDnsHostnames'
                 @vpc[name] = value
               when 'vpc'
                 @response['vpcSet'] << @vpc

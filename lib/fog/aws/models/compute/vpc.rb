@@ -4,13 +4,15 @@ module Fog
   module Compute
     class AWS
       class VPC < Fog::Model
-        identity :id,                :aliases => 'vpcId'
+        identity :id,                     :aliases => 'vpcId'
 
         attribute :state
-        attribute :cidr_block,       :aliases => 'cidrBlock'
-        attribute :dhcp_options_id,  :aliases => 'dhcpOptionsId'
-        attribute :tags,             :aliases => 'tagSet'
-        attribute :tenancy,          :aliases => 'instanceTenancy'
+        attribute :cidr_block,            :aliases => 'cidrBlock'
+        attribute :dhcp_options_id,       :aliases => 'dhcpOptionsId'
+        attribute :tags,                  :aliases => 'tagSet'
+        attribute :tenancy,               :aliases => 'instanceTenancy'
+        attribute :enable_dns_support,    :aliases => 'enableDnsSupport'
+        attribute :enable_dns_hostnames,  :aliases => 'enableDnsHostnames'
 
         def initialize(attributes={})
           self.dhcp_options_id ||= "default"
